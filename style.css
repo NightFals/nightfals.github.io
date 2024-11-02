@@ -1,39 +1,60 @@
-h1 {
-    font-size: 40px;
-    font-family: 'Comfortaa', cursive;
-    color: #8e7cc3;
-}
-h2 {
-  font-size: 18px;
-  font-family: 'Comic Sans MS', cursive;
-  color: #8e7cc3;
-  font-weight: bold;
-}
-h3{
-  font-size: 14px;
-  font-family: 'Comic Sans MS', cursive;
-  color: #8e7cc3;
-  font-weight:bold;
-}
-p{
-  font-size: 12px;
-  font-family: 'Comfortaa', cursive; 
-  color: #1c1c1c;
-}
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    margin: 0;
+    padding: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 5px;
+.container {
+    display: flex;
 }
 
-#resultSet1,
-#resultSet2 {
-    font-size: 20px;
-    margin-top: 20px;
+.sidebar {
+    width: 200px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    padding: 10px;
 }
 
+.sidebar h2 {
+    color: #0057b8;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 5px;
+}
+
+.sidebar .dropdown-container {
+    display: none;
+    padding-left: 20px;
+}
+
+.sidebar .dropdown-btn {
+    background-color: #0057b8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+.sidebar .dropdown-btn:hover {
+    background-color: #0041a3;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
