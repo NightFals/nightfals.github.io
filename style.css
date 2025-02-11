@@ -1,61 +1,85 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
+/* General Reset */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Bar Styling */
+.top-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-bottom: 2px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    font-size: 26px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Navigation Buttons */
+.nav-buttons button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.nav-buttons button:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-buttons button.active {
+    background-color: black;
+    color: white;
+}
+
+/* Side Menu */
+.side-menu {
+    display: none;
+    position: fixed;
+    top: 50px; /* Adjust based on top bar height */
+    left: 0;
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-right: 2px solid black;
+}
+
+.side-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: #575757;
+}
+
+/* Main Content Area */
+.content {
     padding: 20px;
 }
 
-.container {
-    display: flex;
+.section {
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-top: 20px;
 }
-
-.sidebar {
-    width: 200px;
-    background-color: #ffffff;
-    border-right: 1px solid #ddd;
-    padding: 10px;
-}
-
-.sidebar h2 {
-    color: #0057b8;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar li {
-    margin-bottom: 5px;
-}
-
-.sidebar .dropdown-container {
-    display: none;
-    padding-left: 20px;
-}
-
-.sidebar .dropdown-btn {
-    background-color: #0057b8;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    text-align: left;
-    width: 100%;
-}
-
-.sidebar .dropdown-btn:hover {
-    background-color: #0041a3;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: #333;
-}
-
-.sidebar a:hover {
-    text-decoration: underline;
-}
-
