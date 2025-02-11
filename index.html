@@ -3,47 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AP Chemistry Learning Hub</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to the AP Chemistry Learning Hub</h1>
-    </header>
-    <div class="container">
-        <nav class="sidebar">
-            <h2>Units</h2>
-            <ul>
-                <li><button class="dropdown-btn">Unit 0</button>
-                    <div class="dropdown-container">
-                        <ul>
-                            <li><a href="#unit0">Assignments</a></li>
-                            <li><a href="#unit0-quizzes">Quizzes/Tests</a></li>
-                            <li><a href="#unit0-worksheets">Worksheets</a></li>
-                            <li><a href="#unit0-day1">Day 1</a></li>
-                            <li><a href="#unit0-day2">Day 2</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><button class="dropdown-btn">Unit 1</button>
-                    <div class="dropdown-container">
-                        <ul>
-                            <li><a href="#unit1">Assignments</a></li>
-                            <li><a href="#unit1-quizzes">Quizzes/Tests</a></li>
-                            <li><a href="#unit1-worksheets">Worksheets</a></li>
-                            <li><a href="#unit1-day1">Day 1</a></li>
-                            <li><a href="#unit1-day2">Day 2</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <!-- Repeat for Units 2 to 9 -->
-            </ul>
-        </nav>
-        <main>
-            <p>Your journey to a 5 on the AP Chemistry exam starts here. Navigate to the dashboard to access lessons, quizzes, and more.</p>
-            <a href="#dashboard" class="button">Go to Dashboard</a>
-        </main>
+
+    <!-- Top Bar with Hamburger Menu -->
+    <div class="top-bar">
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button onclick="showSection('daily')" class="active">Daily</button>
+            <button onclick="showSection('weekly')">Weekly</button>
+            <button onclick="showSection('monthly')">Monthly</button>
+            <button onclick="showSection('projects')">Projects</button>
+        </div>
     </div>
-    <script src="index.js"></script>
+
+    <!-- Side Menu Dropdown -->
+    <div class="side-menu" id="sideMenu">
+        <a href="#">Home</a>
+        <a href="#">Settings</a>
+        <a href="#">About</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content">
+        <div id="daily" class="section">Your daily tasks go here.</div>
+        <div id="weekly" class="section" style="display:none;">Your weekly tasks go here.</div>
+        <div id="monthly" class="section" style="display:none;">Your monthly tasks go here.</div>
+        <div id="projects" class="section" style="display:none;">Your projects go here.</div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
