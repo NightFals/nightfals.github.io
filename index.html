@@ -8,32 +8,51 @@
 </head>
 <body>
 
-    <!-- Top Bar with Hamburger Menu -->
-    <div class="top-bar">
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <!-- Sign-In Page -->
+    <div id="login-screen">
+        <h2>Sign In</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="login-error"></p>
+    </div>
 
-        <!-- Navigation Buttons -->
-        <div class="nav-buttons">
-            <button onclick="showSection('daily')" class="active">Daily</button>
-            <button onclick="showSection('weekly')">Weekly</button>
-            <button onclick="showSection('monthly')">Monthly</button>
-            <button onclick="showSection('projects')">Projects</button>
+    <!-- Main App (Hidden Until Login) -->
+    <div id="app" style="display:none;">
+
+        <!-- Side Menu -->
+        <div class="side-menu" id="sideMenu">
+            <div class="menu-header">
+                <span class="close-btn" onclick="toggleMenu()">✖</span>
+            </div>
+            <a href="#">Home</a>
+            <a href="#">Settings</a>
+            <a href="#">About</a>
         </div>
-    </div>
 
-    <!-- Side Menu Dropdown -->
-    <div class="side-menu" id="sideMenu">
-        <a href="#">Home</a>
-        <a href="#">Settings</a>
-        <a href="#">About</a>
-    </div>
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div class="nav-buttons">
+                <button onclick="showSection('daily')" class="active">Daily</button>
+                <button onclick="showSection('weekly')">Weekly</button>
+                <button onclick="showSection('monthly')">Monthly</button>
+                <button onclick="showSection('projects')">Projects</button>
+            </div>
+        </div>
 
-    <!-- Main Content Area -->
-    <div class="content">
-        <div id="daily" class="section">Your daily tasks go here.</div>
-        <div id="weekly" class="section" style="display:none;">Your weekly tasks go here.</div>
-        <div id="monthly" class="section" style="display:none;">Your monthly tasks go here.</div>
-        <div id="projects" class="section" style="display:none;">Your projects go here.</div>
+        <!-- Main Content -->
+        <div class="content">
+            <div id="daily" class="section">
+                <h3>Daily Tasks</h3>
+                <ul id="todo-list"></ul>
+                <input type="text" id="new-task" placeholder="New Task">
+                <button onclick="addTask()">Add Task</button>
+            </div>
+            <div id="weekly" class="section" style="display:none;">Your weekly tasks go here.</div>
+            <div id="monthly" class="section" style="display:none;">Your monthly tasks go here.</div>
+            <div id="projects" class="section" style="display:none;">Your projects go here.</div>
+        </div>
     </div>
 
     <script src="index.js"></script>
